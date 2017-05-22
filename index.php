@@ -1,5 +1,5 @@
 <?php
 
-echo "hello world!"
+include_once("email-template.html");
 
 ?>
