@@ -1,6 +1,21 @@
 <?php
-echo "hello!!!";
 
+$courseName = "Data Something";
+$courseDates = "November 3, 2017 - December 8, 2018";
+$courseScheduleList = array("Monday: 3:33pm - 4:00pm", "Tuesday: 4:15pm - 8:25pm");
+$coursePrice = "$250";
+$studentName = "Ali Mir";
+
+$courseSchedules = "";
+
+foreach ($courseScheduleList as &$schedule) {
+  $courseSchedules .= "<p style=\"margin: 0;font-size: 14px;line-height: 16px\"><span style=\"font-size: 16px; line-height: 19px;\">$schedule</span></p>";
+}
+
+$courseInstructorName = "John Smith";
+$courseInstructorPhoneNumber = "408.222.2222";
+$courseEmailAddress = "aaa@aaa.com";
+$courseAddress = "123 Streetname Dr. Cityname, ST";
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!--[if IE]><html xmlns="http://www.w3.org/1999/xhtml" class="ie-browser" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><![endif]--><!--[if !IE]><!--><html style="margin: 0;padding: 0;" xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--><head>
