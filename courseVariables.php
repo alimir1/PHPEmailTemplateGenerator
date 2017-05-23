@@ -18,8 +18,6 @@ foreach ($courseScheduleList as &$schedule) {
   $courseSchedules .= "<p style=\"margin: 0;font-size: 14px;line-height: 16px\"><span style=\"font-size: 16px; line-height: 19px;\">$schedule</span></p>";
 }
 
-// include_once("email-template.html");
-
-require 'vendor/autoload.php';
+include_once("email-template.html");
 
 ?>
