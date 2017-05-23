@@ -1,10 +1,16 @@
 <?php
 
-$courseName = "Data Something";
-$courseDates = "November 3, 2017 - December 8, 2018";
-$courseScheduleList = array("Monday: 3:33pm - 4:00pm", "Tuesday: 4:15pm - 8:25pm");
-$coursePrice = "$250";
-$studentName = "Ali Mir";
+$retrievedData = json_decode(file_get_contents('php://input'));
+
+$courseName = $retrievedData->{'course_name'};
+$courseScheduleList = $retrievedData->{'schedules'}[0];
+$courseDates = $retrievedData->{'course_dates'};
+$coursePrice = $retrievedData->{'course_price'};
+$studentName = $retrievedData->{'student_name'};
+$courseInstructorName = $retrievedData->{'instructor_name'};
+$courseEmailAddress = $retrievedData->{'instructor_email_address'};
+$courseAddress = $retrievedData->{'course_address'};
+$courseInstructorPhoneNumber = $retrievedData->{'instructor_phone_number'};
 
 $courseSchedules = "";
 
@@ -12,8 +18,8 @@ foreach ($courseScheduleList as &$schedule) {
   $courseSchedules .= "<p style=\"margin: 0;font-size: 14px;line-height: 16px\"><span style=\"font-size: 16px; line-height: 19px;\">$schedule</span></p>";
 }
 
-$courseInstructorName = "John Smith";
-$courseInstructorPhoneNumber = "408.222.2222";
-$courseEmailAddress = "aaa@aaa.com";
-$courseAddress = "123 Streetname Dr. Cityname, ST";
+// include_once("email-template.html");
+
+require 'vendor/autoload.php';
+
 ?>
